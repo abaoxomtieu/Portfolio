@@ -1,36 +1,27 @@
-import { useEffect, useRef, useState } from 'react';
-import { useScrollReveal } from '../hooks/useScrollReveal';
-import gsap from 'gsap';
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
+import { useEffect, useRef, useState } from "react";
+import { useScrollReveal } from "../hooks/useScrollReveal";
+import gsap from "gsap";
+import { FaGithub, FaEnvelope } from "react-icons/fa";
 
 const socialLinks = [
   {
-    name: 'GitHub',
+    name: "GitHub",
     icon: FaGithub,
-    url: 'https://github.com/yourusername',
+    url: "https://github.com/abaoxomtieu",
   },
+
   {
-    name: 'LinkedIn',
-    icon: FaLinkedin,
-    url: 'https://linkedin.com/in/yourusername',
-  },
-  {
-    name: 'Twitter',
-    icon: FaTwitter,
-    url: 'https://twitter.com/yourusername',
-  },
-  {
-    name: 'Email',
+    name: "Email",
     icon: FaEnvelope,
-    url: 'mailto:your.email@example.com',
+    url: "mailto:htbqn2003@gmail.com",
   },
 ];
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
   const sectionRef = useRef<HTMLElement>(null!);
   const formRef = useRef<HTMLFormElement>(null);
@@ -39,16 +30,16 @@ const Contact = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from('.contact-item', {
+      gsap.from(".contact-item", {
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: 'top 80%',
+          start: "top 80%",
         },
         y: 50,
         opacity: 0,
         duration: 1,
         stagger: 0.2,
-        ease: 'power3.out',
+        ease: "power3.out",
       });
     }, sectionRef);
 
@@ -58,10 +49,12 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission here
-    console.log('Form submitted:', formData);
+    console.log("Form submitted:", formData);
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -178,4 +171,4 @@ const Contact = () => {
   );
 };
 
-export default Contact; 
+export default Contact;
