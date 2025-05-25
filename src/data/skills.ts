@@ -1,5 +1,4 @@
 import {
-  SiPython,
   SiPytorch,
   SiFastapi,
   SiReact,
@@ -7,12 +6,9 @@ import {
   SiHtml5,
   SiCss3,
   SiJavascript,
-  SiGit,
   SiDocker,
   SiMongodb,
-  SiTailwindcss,
   SiHuggingface,
-  SiAntdesign,
   SiOnnx,
   SiLangchain,
   SiAmazon,

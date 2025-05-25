@@ -52,7 +52,6 @@ const Projects = () => {
                       <div className="text-white text-sm mb-2 opacity-80">
                         {exp.position}
                         {exp.teamSize ? ` | Team: ${exp.teamSize}` : ""}
-                        {exp.effort ? ` | Effort: ${exp.effort}` : ""}
                       </div>
                       <div className="mb-2">
                         <span className="font-semibold text-white">

@@ -8,7 +8,6 @@ import Projects from "../components/Projects";
 import Awards from "../components/Awards";
 import Experience from "../components/Experience";
 import Contact from "../components/Contact";
-import SectionNavBar from "../components/SectionNavBar";
 
 const Home = () => {
   const sectionsRef = useRef<HTMLDivElement>(null);

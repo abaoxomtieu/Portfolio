@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
 
 const socialLinks = [

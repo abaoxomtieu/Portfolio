@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { FaBriefcase, FaGraduationCap } from 'react-icons/fa';
 
 const experiences = [

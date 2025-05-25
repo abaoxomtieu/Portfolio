@@ -1,10 +1,23 @@
-import { useEffect, RefObject } from 'react';
+import { useEffect } from 'react';
+import type { RefObject } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-export function useScrollReveal(ref: RefObject<HTMLElement>, options?: gsap.TweenVars) {
+interface ScrollRevealOptions {
+  duration?: number;
+  ease?: string;
+  scrollTrigger?: {
+    trigger: HTMLElement;
+    start?: string;
+    toggleActions?: string;
+    [key: string]: any;
+  };
+  [key: string]: any;
+}
+
+export function useScrollReveal(ref: RefObject<HTMLElement>, options?: ScrollRevealOptions) {
   useEffect(() => {
     if (!ref.current) return;
     const ctx = gsap.context(() => {
