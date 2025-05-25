@@ -39,7 +39,7 @@ const Home = () => {
   return (
     <>
       <div ref={sectionsRef} className="space-y-24">
-        <section id="hero">
+        <section id="home">
           <Hero />
         </section>
         <section id="about">
